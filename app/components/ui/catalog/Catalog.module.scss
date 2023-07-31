@@ -1,0 +1,32 @@
+@import 'app/styles/mixins';
+
+.recommended {
+	> .top_block {
+		@apply flex items-center justify-between mb-6;
+
+		> .sort {
+			@apply text-white;
+		}
+	}
+
+	> .catalog {
+		@apply flex flex-wrap gap-6;
+
+		> div {
+			@apply mb-2.5;
+			width: 23.5%;
+
+			@include media('max', '2xl') {
+				width: 30%;
+			}
+
+			@include media('max', 'md') {
+				width: 45%;
+			}
+
+			@include media('max', 'sm') {
+				width: 95%;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@import 'app/styles/mixins';
+
+.icons {
+	@apply relative flex items-center;
+
+	> .actions {
+		@apply relative flex items-center;
+
+		@include media('max', 'md') {
+			@apply hidden;
+		}
+	}
+}
+
+.button {
+	@apply inline-flex mx-2 items-center justify-center text-3xl text-purple ml-6 opacity-75 transition-opacity hover:opacity-100;
+}

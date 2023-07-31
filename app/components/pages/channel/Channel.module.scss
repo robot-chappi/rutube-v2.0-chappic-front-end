@@ -1,0 +1,21 @@
+@import 'app/styles/mixins';
+
+.wrapper {
+	@apply mb-10 w-1/3;
+
+	@include media('max', 'md') {
+		@apply w-2/3;
+	}
+
+	@include media('max', 'sm') {
+		@apply w-full;
+	}
+
+	.header {
+		@apply flex items-center gap-10;
+	}
+
+	.description {
+		@apply text-gray-500 mt-3;
+	}
+}

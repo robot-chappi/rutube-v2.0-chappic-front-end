@@ -1,0 +1,26 @@
+.button {
+	@apply py-1.5 rounded-lg px-7 bg-primary text-white bg-opacity-80 transition-colors duration-300 hover:bg-opacity-100 text-base;
+
+	&.white {
+		@apply text-black;
+		background-color: #ffffff !important;
+	}
+
+	&.black {
+		@apply text-white;
+		background-color: #000000 !important;
+	}
+
+	&.black {
+		@apply text-white;
+		background-color: #353340 !important;
+	}
+
+	&.transparent {
+		background-color: transparent !important;
+	}
+
+	&.icon {
+		@apply text-3xl py-0 px-0 m-1;
+	}
+}

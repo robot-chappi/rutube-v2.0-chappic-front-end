@@ -1,0 +1,42 @@
+.comment {
+	@apply flex flex-wrap items-center mt-4;
+
+	> .info {
+		@apply ml-3;
+		> .name {
+			@apply text-white;
+			font-size: 1rem;
+		}
+
+		> .message {
+			@apply text-xs text-gray-500;
+			width: 200px;
+		}
+	}
+
+	> .list {
+		@apply ml-auto relative;
+
+		> button {
+			@apply text-tiny text-white;
+		}
+
+		> .menu {
+			@apply shadow-block animate-scaleIn z-20 rounded-lg absolute bg-purple p-1;
+			top: -2rem;
+			left: -4rem;
+
+			> ul {
+				@apply flex flex-col gap-0.5;
+
+				> li {
+					@apply text-white transition;
+
+					&:hover {
+						@apply text-gray-300;
+					}
+				}
+			}
+		}
+	}
+}

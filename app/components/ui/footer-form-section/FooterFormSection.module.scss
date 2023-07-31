@@ -1,0 +1,13 @@
+@import 'app/styles/mixins';
+
+.footer {
+	@apply absolute left-0 bottom-0 w-full p-5 flex justify-between items-center;
+
+	@include media('max', 'md') {
+		@apply relative justify-between;
+	}
+
+	@include media('max', 'sm') {
+		@apply p-1;
+	}
+}

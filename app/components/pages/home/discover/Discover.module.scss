@@ -1,0 +1,53 @@
+@import 'app/styles/mixins';
+
+.discover {
+	@apply flex gap-7 mb-10;
+
+	@include media('max', '2sm') {
+		@apply flex-col justify-center;
+	}
+
+	> .top_video {
+		@apply w-2/3;
+
+		@include media('max', 'lg') {
+			@apply w-8/12;
+		}
+
+		@include media('max', 'md') {
+			@apply w-6/12;
+		}
+
+		@include media('max', '2sm') {
+			@apply w-full;
+		}
+
+		> .sub_name {
+			@apply text-lg;
+		}
+
+		> h1 {
+			@apply text-xl my-5 font-semibold;
+		}
+
+		> .description {
+			@apply text-gray-500 mb-6;
+		}
+	}
+
+	> .random_video {
+		@apply w-1/3;
+
+		@include media('max', 'lg') {
+			@apply w-6/12;
+		}
+
+		@include media('max', 'md') {
+			@apply w-6/12;
+		}
+
+		@include media('max', '2sm') {
+			@apply w-full;
+		}
+	}
+}

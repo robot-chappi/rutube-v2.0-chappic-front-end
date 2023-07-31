@@ -1,0 +1,11 @@
+.main {
+	@apply block;
+
+	.content {
+		width: 100%;
+
+		.wrapper {
+			@apply pl-6 pr-8 mt-24;
+		}
+	}
+}

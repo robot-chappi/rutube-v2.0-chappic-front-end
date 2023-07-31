@@ -1,0 +1,20 @@
+.wrapper {
+	@apply w-full animate-errorScaleIn block;
+
+	> .section {
+		@apply w-full h-full p-5 text-center flex flex-col gap-2 justify-center m-auto rounded-lg;
+		background-color: #252836;
+
+		> .heading {
+			@apply text-lg font-bold text-white;
+		}
+
+		> .description {
+			@apply text-tiny text-white;
+		}
+
+		> .link {
+			@apply text-tiny font-bold text-white;
+		}
+	}
+}

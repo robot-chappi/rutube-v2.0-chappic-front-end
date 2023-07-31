@@ -1,0 +1,33 @@
+@import 'app/styles/mixins';
+
+.comments {
+	@apply h-full rounded-xl p-5 relative;
+	background-color: #252836;
+
+	@include media('max', 'xl') {
+		@apply mb-5 pb-20;
+	}
+
+	> h2 {
+		@apply text-white text-tiny;
+	}
+
+	.line {
+		@apply w-full h-0.5 my-4;
+		background-color: #303241;
+	}
+
+	.grid {
+		@apply overflow-y-scroll px-2;
+		height: 20rem;
+	}
+
+	> p {
+		@apply text-gray-500 mb-4;
+	}
+
+	.bottomForm {
+		@apply absolute bottom-0 left-5;
+		width: calc(100% - 2.5rem);
+	}
+}

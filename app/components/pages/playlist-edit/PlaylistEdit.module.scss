@@ -1,0 +1,33 @@
+@import 'app/styles/mixins';
+
+.item {
+	@apply shadow-block p-6;
+}
+
+.form {
+	@apply flex flex-wrap;
+
+	.fields {
+		@apply w-7/12 pr-6 pt-8;
+
+		@include media('max', 'sm') {
+			@apply w-full;
+		}
+	}
+
+	.info {
+		@apply w-5/12 p-3 pl-10;
+
+		@include media('max', 'sm') {
+			@apply w-full mt-10 pl-0;
+		}
+	}
+
+	.button {
+		@apply mt-10;
+
+		@include media('max', 'sm') {
+			@apply mx-auto my-10;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+Sitemap: http://localhost:3000/sitemap.xml
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Disallow: /playlist/edit/*
+Disallow: /video/edit/*
+
+User-agent: YandexBot
+Disallow: /playlist/edit/*
+Disallow: /video/edit/*

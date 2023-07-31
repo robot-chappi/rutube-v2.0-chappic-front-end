@@ -1,0 +1,57 @@
+@import 'app/styles/mixins';
+
+.footer {
+	@apply absolute left-0 bottom-0 w-full p-5 flex justify-between items-center;
+
+	@include media('max', 'md') {
+		@apply relative justify-between;
+	}
+
+	@include media('max', 'sm') {
+		@apply p-1;
+	}
+
+	.status {
+		@apply flex items-center text-gray-400 text-base;
+
+		@include media('max', 'sm') {
+			@apply text-tiny;
+		}
+
+		.upload-icon,
+		.check-icon {
+			@apply text-2xl mr-3;
+
+			@include media('max', 'sm') {
+				@apply mr-1.5;
+			}
+		}
+
+		.upload-icon {
+			@apply text-primary;
+			animation: blueAnimate 2s ease-in-out infinite;
+		}
+
+		&.icons-uploaded {
+			.upload-icon {
+				@apply animate-none hidden;
+			}
+
+			.check-icon {
+				@apply text-primary opacity-80;
+			}
+		}
+	}
+}
+
+@keyframes blueAnimate {
+	0% {
+		opacity: 30%;
+	}
+	50% {
+		opacity: 90%;
+	}
+	100% {
+		opacity: 30%;
+	}
+}

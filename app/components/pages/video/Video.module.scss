@@ -1,0 +1,47 @@
+@import 'app/styles/mixins';
+
+.layout {
+	@apply flex space-x-8;
+
+	@include media('max', 'md') {
+		@apply block;
+	}
+
+	@include media('max', 'xl') {
+		&:first-child {
+			@apply block space-x-0;
+
+			> .hidden_comments {
+				@apply h-full;
+
+				@include media('max', 'xl') {
+					@apply hidden;
+				}
+			}
+		}
+
+		&:last-child {
+			@apply space-x-0;
+		}
+	}
+
+	> div:first-child {
+		@apply basis-4/5;
+	}
+
+	> div:last-child {
+		@apply basis-1/3;
+	}
+}
+
+.block_comments {
+	@include media('min', 'xl') {
+		@apply hidden mb-5;
+	}
+}
+
+.hidden_block {
+	@include media('max', 'xl') {
+		@apply hidden;
+	}
+}
